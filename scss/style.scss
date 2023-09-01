@@ -1,0 +1,241 @@
+/* --- TIPOGRAFIAS --- */ 
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Homemade+Apple&display=swap');
+
+/* --- IMPORT --- */ 
+@import "variables", "media-max-426px", "media-min-427px", "media-min-1024px";
+
+/* --- ESTILO --- */
+
+body{ 
+  width: 100%; 
+  min-height: 100vh;
+  margin: 0px;
+}
+
+p{margin: 0px;}
+label{
+  color: $colorPrincipal; 
+  font-weight: 700;
+}
+
+.centrado{text-align: center;}
+.justificado{text-align: justify;}
+.relative-position{position: relative;}
+
+.shadow{
+  box-shadow: 10px 10px 20px 0px rgba(224,224,224,0.77);
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(224,224,224,0.77);
+  -moz-box-shadow: 10px 10px 20px 0px rgba(224,224,224,0.77);
+}
+
+.section-division{
+  color: $colorAntagonicoStrong;
+  border:solid;     
+}
+
+/*Textos*/
+.tituloWeb{font-family: $fontFamilyPrincipal;}
+
+.tituloWeb_big{
+  @extend .tituloWeb;
+  font-size: 64px;
+}
+
+/*Imagenes*/
+
+.image-class{width: 100%;}
+
+.image-class_normal{
+  @extend .image-class;
+  max-width: 500px;
+}
+
+.image-class_big{
+  @extend .image-class;
+  max-width: 1000px;
+}
+
+.image-class_hiper{
+  @extend .image-class;
+  max-width: 2000px;
+}
+  
+.image-class_opacity-up{
+  @extend .image-class;
+  opacity: 0.85;
+}
+
+/*Botones*/
+
+.btn{border-radius: 0px;}
+
+.btn-principal {
+  color: $colorNeutroPrincipal;
+  background-color: $colorPrincipal;
+  border-color: $colorPrincipal;
+  &:hover {
+    color: $colorNeutroPrincipal;
+    background-color: $colorPrincipalHover;
+    border-color: $colorPrincipalHover;
+  }
+}
+
+.btn-secundario {
+  color: $colorPrincipal;
+  background-color: $colorSecundario;
+  border-color: $colorSecundario;
+  &:hover {
+  background-color: $colorSecundarioHover;
+  border-color: $colorSecundarioHover;
+  }
+}
+
+
+/*LEYENDAS*/
+
+.text-cita{
+  font-family: $fontFamilyResalte;
+  z-index: 1;
+}
+
+.text-cita_big{
+  @extend .text-cita;
+  font-size: 22px;
+  padding: 20px 5px 10px 5px;
+}
+
+.text-cita_hiper{
+  @extend .text-cita;
+  font-size: 34px;
+}
+
+.text-author{
+  font-family: $fontFamilyResalteSecundaria;
+  z-index: 2;
+}
+
+.text-author_big{
+  @extend .text-author;
+  font-size: 22px;
+  padding: 15px 0px 10px 0px;
+}
+
+/*MENU*/                                                      
+.navbar-light:hover .navbar-nav:hover  .nav-link:hover  {
+  color: $colorNeutroPrincipal;
+  background-color: $colorNeutroSecundario;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  background-color: $colorNeutroPrincipalTransparency!important;      
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+/*PIE DE PAGINA*/
+
+.footer-section{
+  color: $colorNeutroPrincipal;
+  background-color: $colorNeutroSecundario;
+  margin: 50px 0px 0px 0px;
+  padding: 25px;
+
+  .social-media{
+    text-align: center; padding-bottom:5px;
+    .social-media-icon{width: 18px; height: 18px;}
+  }
+  .footText{font-size: 12px; text-transform: uppercase; text-align: center; text-justify:inter-word;} 
+}
+
+/*PAGINAS DE CONTENIDO*/
+
+.contentBox{
+  width: calc(75vw + 24px);
+  margin: auto;
+
+  /*DIRECCION DE PAGINA*/
+  .pageHeader{
+    height: 300px;
+    margin: auto auto 12px auto;
+    font-size: 30px;
+    text-align: center;
+   /* background-image: url();*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+  
+    .breadcrumb {
+      flex-wrap: nowrap;
+      margin-bottom: 1rem;
+      list-style: none;
+      align-content: flex-end;
+      align-items: flex-end;
+      flex-direction: row;
+      justify-content: flex-start;
+      height: 100%;
+    
+      .breadcrumb-item.active {color: $colorNeutroPrincipal;}
+
+      .bottom-left-margin{margin: 0px 0px 20px 20px;}
+    }
+  }
+
+  /* --- GALERIA ---- */
+
+  .content-image-grid {
+    display: grid;
+    grid-template-rows: auto;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: auto;
+    grid-gap: 12px;
+  }
+  .modal .modal-dialog .modal-content {
+
+    .modal-header {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1rem;
+      border-bottom: 1px solid #dee2e6;
+      border-top-left-radius: calc(0.3rem - 1px);
+      border-top-right-radius: calc(0.3rem - 1px);
+      flex-direction: column;
+      border-bottom: 1px solid $colorAntagonico;
+    }
+
+    .modal-footer {border-top: 1px solid $colorAntagonico;}
+
+  }
+
+  /* --- CONTACTO --- */
+
+  form-section div{
+    .resize-none{resize:none;}
+
+    .form-control{border: 2px solid $colorAntagonicoStrong;}
+  }
+}
+
+/* --- HOME --- */
+
+.principal-section{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 6vw;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
